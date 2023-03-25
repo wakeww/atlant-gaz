@@ -1,0 +1,97 @@
+@import "variables";
+//*===========<popup>=================================================================================================================================================================
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+    background-color: rgba(0, 0, 0, 0.8);
+    &.open {
+        visibility: visible;
+        opacity: 1;
+        .popup__content {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+
+    &__body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 10px;
+        @media (max-width: $sm) {
+            padding: 15px 10px;
+        }
+    }
+
+    &__content {
+        max-width: 462px;
+        transition: all 0.5s ease 0s;
+        opacity: 0;
+        transform: translate(0, -100%);
+    }
+
+    &__inner {
+        padding: 30px;
+        background-color: #fff;
+        position: relative;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 33px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 22px;
+        height: 22px;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $bl;
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__title {
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $bl;
+        font-size: 24px;
+        line-height: calc(29 / 24);
+        max-width: 210px;
+        margin: 0px 0px 26px 0px;
+    }
+
+    &__form {
+    }
+
+    &__text {
+        text-align: center;
+        margin: 20px 0px 0px 0px;
+        font-family: "Open Sans";
+        font-style: italic;
+        font-weight: 400;
+        color: #ffffff;
+        opacity: 0.6;
+    }
+}

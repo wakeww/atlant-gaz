@@ -1,0 +1,23 @@
+@import "variables";
+//*===========<choice>=================================================================================================================================================================
+.choice {
+    padding: 34px 0px 64px 0px;
+
+    &__container {
+        max-width: 748px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin: 0px 0px 35px 0px;
+    }
+
+    &__gallery {
+        margin: 0px 0px 10px 0px;
+    }
+
+    &__btn {
+        align-self: center;
+    }
+}

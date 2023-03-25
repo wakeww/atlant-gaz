@@ -1,0 +1,132 @@
+@import "variables";
+//*===========<footer>================================================================================================================================================================
+.footer {
+    padding: 0px 0px 48px 0px;
+    @media (max-width: $md) {
+        padding: 0px 0px 35px 0px;
+    }
+    @media (max-width: $sm) {
+        padding: 0px 0px 20px 0px;
+    }
+    &__container {
+    }
+
+    &__info {
+        margin: 0px 0px 40px 0px;
+        @media (max-width: 500px) {
+            margin: 0px 0px 30px 0px;
+        }
+    }
+
+    &__bottom {
+    }
+}
+
+.info-footer {
+    display: flex;
+    background: #f1f1f1;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 33px;
+    @media (max-width: $md) {
+        display: block;
+    }
+    &__content {
+        flex: 0 1 50%;
+        padding: 40px;
+        @media (max-width: $md) {
+            padding: 25px;
+        }
+    }
+
+    &__map {
+        flex: 0 1 50%;
+        height: 350px;
+        iframe {
+            border-top-right-radius: 33px;
+            border-bottom-right-radius: 33px;
+            @media (max-width: $md) {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 33px;
+                border-bottom-left-radius: 33px;
+            }
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.content-info-footer {
+    &__top {
+        padding: 0px 0px 21px 0px;
+        border-bottom: 1px solid rgba(27, 38, 57, 0.2);
+        margin: 0px 0px 30px 0px;
+    }
+
+    &__title {
+        margin: 0px 0px 16px 0px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: calc(25 / 18);
+        font-family: "Open Sans";
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $mirage;
+    }
+
+    &__list {
+        font-family: "Open Sans";
+        font-size: 18px;
+        line-height: calc(25 / 18);
+        dt {
+            color: $bl;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0px 0px 3px 0px;
+        }
+        dd {
+            a {
+                color: $mirage;
+            }
+        }
+        div {
+            margin: 0px 0px 45px 0px;
+            @media (max-width: $sm) {
+                margin: 0px 0px 25px 0px;
+            }
+            &:last-child {
+                margin: 0px 0px 0px 0px;
+            }
+        }
+    }
+}
+.bottom-footer {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -20px;
+        @media (max-width: $sm) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__column {
+        padding: 0 20px;
+        flex: 0 1 50%;
+        margin: 0px 0px 20px 0px;
+        &:last-child {
+            text-align: right;
+            @media (max-width: $sm) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: calc(19 / 14);
+        color: $wh;
+        font-family: "Open Sans";
+    }
+}

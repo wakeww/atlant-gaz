@@ -1,0 +1,27 @@
+@import "variables";
+//*===========<partners>=================================================================================================================================================================
+.partners {
+    padding: 0px 0px 14px 0px;
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+    }
+
+    &__column {
+        padding: 0 8px;
+        flex: 0 1 16.667%;
+        margin: 0px 0px 20px 0px;
+        @media (max-width: $ct) {
+            flex: 0 1 33.333%;
+        }
+        @media (max-width: 600px) {
+            flex: 0 1 50%;
+        }
+        @media (max-width: 400px) {
+            flex: 0 1 100%;
+        }
+    }
+}
