@@ -40,11 +40,11 @@
 
     &__map {
         flex: 0 1 50%;
-        height: 350px;
         iframe {
             border-top-right-radius: 33px;
             border-bottom-right-radius: 33px;
             @media (max-width: $md) {
+                height: 350px;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 33px;
                 border-bottom-left-radius: 33px;
@@ -87,6 +87,11 @@
         dd {
             a {
                 color: $mirage;
+                @media (min-width: 992px) {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
         div {
@@ -128,5 +133,10 @@
         line-height: calc(19 / 14);
         color: $wh;
         font-family: "Open Sans";
+        @media (min-width: 992px) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }

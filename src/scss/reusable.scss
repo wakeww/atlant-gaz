@@ -38,19 +38,21 @@
         content: "";
         position: absolute;
         top: 6px;
-        left: 5px;
-        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 6px);
         height: 44px;
-        background: url(../img/btn/01.svg) 0 0 no-repeat;
+        background: url(../img/btn/01.svg) 50% 0 / contain no-repeat;
     }
     &::after {
         content: "";
         position: absolute;
         bottom: 5px;
-        left: 5px;
-        width: 100%;
+        width: calc(100% - 6px);
+        left: 50%;
+        transform: translateX(-50%);
         height: 26px;
-        background: url(../img/btn/02.svg) 0 0 no-repeat;
+        background: url(../img/btn/02.svg) 50% 100% / contain no-repeat;
     }
     span {
         padding: 0 55px;
@@ -66,6 +68,13 @@
     @media (min-width: 992px) {
         &:hover {
             background-color: #1e81dd;
+        }
+    }
+    &_big {
+        &::before,
+        &::after {
+            width: calc(100% - 10px);
+            background-size: auto;
         }
     }
 }
